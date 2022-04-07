@@ -1,6 +1,6 @@
 # Training language models to follow instructions with human feedback
 
-<img width="100%" alt="image" src="https://user-images.githubusercontent.com/41967014/162139500-c57abca1-678a-47fc-aedd-5286d6e7fe3e.png">
+![image](https://user-images.githubusercontent.com/41967014/162145268-1ddacc39-8665-44f0-8ae5-ca74d5c6b65d.png)
 
 Open AI / 2022.03 / Alignment / Computation and Language
 
