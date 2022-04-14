@@ -35,19 +35,29 @@ Open AI / 2022.03 / Alignment / Computation and Language
   - InstructGPT models show promising generalization to instructions outside of the RLHF fine- tuning distribution.
   - InstructGPT still makes simple mistakes.
 
-### 2. Related Work
-- 생략
-
 ### 3. Method and experimental details
+- InsturctGPT를 훈련시키기 위한 핵심 기술은 reinforcement learning from human feedback (RHHF)
 ![image](https://user-images.githubusercontent.com/41967014/163312061-46440ccb-8a37-4409-80f7-d0fc6aa3376e.png)
-- Method
+- **Method**
   - Step1 : supervised fine-tuning (SFT)
   - Step2 : reward model (RM) training
   - Step3 : reinforcement learning via proximal policy optimization (PPO)
-- Models
+- **Models**
   - Supervised fine-tuning (SFT)
   - Reward modeling (RM)
   - Reinforcement learning (RL)
+- **Workflow**
+   - 먼저, GPT-3를 fine-tuning 시킵니다. 이 때 40명의 작업자를 고용하여 레이블 데이터를 생성합니다.
+   - 실제 OpenAI API의 유저들이 제출한 프롬포트 중에서 개인정보가 담겨져 있지 않은 예시들을 추출하여 작업자들에게 전달합니다.
+   - 10,000여쌍의 데이터를 모아서 GPT-3를 fine-tuning 진행하였습니다.
+   - 학습된 GPT-3가 생성한 답변 후보 여러개에 대하여 작업자들이 점수를 매기는 작업을 합니다. 여러 답변 후보들 중에 어떤 답변이 더 좋은 답변인지 순위를 매깁니다.
+   - 이러한 작업의 이유는 GPT-3에게 어떤 답변이 더 좋은 답변인지 사람의 피드백을 주기 위함인데 GPT-3의 모든 Output을 사람이 매번 피드백하는 것은 불가능합니다.
+   - 따라서 사람의 피드백 점수를 예측하는 모델을 만드는데 이것을 Reward Model이라고 부릅니다.
+   - 강화학습에는 다양한 요소들이 존재하는데 Agent(학습하려는 모델), Environment(주변 환경), Action(모델이 취할 수 있는 행동), Policy(모델이 어덯게 행돌할지 결정하는 알고리즘), Reward(모델이 한 행동에 따라 환경에 부여하는 리워드), Interpreter(리워드를 결정하는 사람 또는 시스템) 등이 있습니다.
+   - 정리하면, RL은 Agent가 실시간으로 변화하는 Environment에서 Interpreter 의해 결정된 Reward에 의하여 Action을 취하고 그 결과가 Environment에 반영되가면서 최종 Goal을 달성하는 최적의 Policy를 찾아가는 학습 방법입니다.
+   - 이를 GPT-3에 대입하면 Agent(GPT-3), Environment(유저의 Input), Action(모델의 Output), Policy(GPT-3의 파라미터), Reward(RM 모델의 예측 점수), Interpreter(RM 모델)이 됩니다.
+   - Supervised Learning된 GPT-3 모델이 답변을 생성하면 Reward 모델을 통해 결과를 평가하고 RL 모델의 피드백을 통해 GPT-3의 파라미터를 업데이트 합니다. 이런 과정 계속 반복합니다.
+   - 이 때 RL에 사용되는 학습 방법은 Proximal Policy Optimization(PPO)라는 알고리즘인데 Open AI RL 연구팀에서 가장 많이 사용하는 학습 방법입니다.
 
 ### 4. Results
 - 각각의 모델들의 Output에 대하여 사용자가 1 ~ 7점의 리커트 척도를 이용하여 모델의 결과를 평가. 그 결과 InstructGPT가 가장 높은 선호도를 보임.
@@ -66,3 +76,4 @@ Open AI / 2022.03 / Alignment / Computation and Language
 - https://arxiv.org/abs/2203.02155
 - https://openai.com/blog/instruction-following/
 - https://jiho-ml.com/weekly-nlp-53/
+- https://littlefoxdiary.tistory.com/101?category=847374
