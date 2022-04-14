@@ -36,7 +36,7 @@ Open AI / 2022.03 / Alignment / Computation and Language
   - InstructGPT still makes simple mistakes.
 
 ### 3. Method and experimental details
-- InsturctGPT를 훈련시키기 위한 핵심 기술은 reinforcement learning from human feedback (RHHF)
+- InsturctGPT를 훈련시키기 위한 핵심 기술은 reinforcement learning from human feedback (RLHF)
 ![image](https://user-images.githubusercontent.com/41967014/163312061-46440ccb-8a37-4409-80f7-d0fc6aa3376e.png)
 - **Method**
   - Step1 : supervised fine-tuning (SFT)
