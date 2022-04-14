@@ -4,6 +4,9 @@
 
 Open AI / 2022.03 / Alignment / Computation and Language
 
+![image](https://user-images.githubusercontent.com/41967014/163311757-13fba069-aa29-45b1-be7e-bbd0297ff24f.png)
+![image](https://user-images.githubusercontent.com/41967014/163311909-b8acee43-d053-4054-acd2-f2bd8dc04dfc.png)
+
 ### Abstract
 - 언어 모델을 크게 만든다고 해서 무조건 사용자의 의도를 더 잘 따르는 것은 아님.
 - 종종 대형 모델들의 Output에는 untruthful(허위), toxic(독성) 등의 결과를 내뱉으며 이는 사용자에게 도움이 되지 않음. 즉 모델은 사람의 생각대로 결과를 보여주지 않음.
