@@ -39,7 +39,7 @@ Open AI / 2022.03 / Alignment / Computation and Language
 - 생략
 
 ### 3. Method and experimental details
-![image](https://user-images.githubusercontent.com/41967014/163305614-05ba8c1e-b3da-4ccd-a76f-3d2064654c53.png)
+![image](https://user-images.githubusercontent.com/41967014/163312061-46440ccb-8a37-4409-80f7-d0fc6aa3376e.png)
 - Method
   - Step1 : supervised fine-tuning (SFT)
   - Step2 : reward model (RM) training
@@ -50,12 +50,17 @@ Open AI / 2022.03 / Alignment / Computation and Language
   - Reinforcement learning (RL)
 
 ### 4. Results
-  - ![image](https://user-images.githubusercontent.com/41967014/163308883-72d7f64f-e07f-4629-b107-e30e50ed1d1a.png)
-  - ![image](https://user-images.githubusercontent.com/41967014/163308908-3cc06253-645e-4314-bccc-2e7b2ebf0f33.png)
-  - ![image](https://user-images.githubusercontent.com/41967014/163308918-a1438b68-d19b-41c1-bb8a-bff4f9f11a48.png)
-  - ![image](https://user-images.githubusercontent.com/41967014/163308963-43282103-51a1-4bf8-908b-cb1858f5750c.png)
-  - ![image](https://user-images.githubusercontent.com/41967014/163308981-d2216c58-7ac7-40f3-a187-5eadbaea7466.png)
-  - ![image](https://user-images.githubusercontent.com/41967014/163309139-23a0f0cf-59fc-4e8d-97a6-c7400aaef872.png)
+- 각각의 모델들의 Output에 대하여 사용자가 1 ~ 7점의 리커트 척도를 이용하여 모델의 결과를 평가. 그 결과 InstructGPT가 가장 높은 선호도를 보임.
+![image](https://user-images.githubusercontent.com/41967014/163312160-e7de10ad-0760-4f09-b7b2-c0f03e1ab8be.png)
+- truthness, toxic, Hallucinations 등의 안정성 테스트에서도 InstructGPT가 가장 좋은 성능을 보임.
+![image](https://user-images.githubusercontent.com/41967014/163312346-3c11e1e5-eb23-4172-9064-d32e6e74cf11.png)
+
+![image](https://user-images.githubusercontent.com/41967014/163308883-72d7f64f-e07f-4629-b107-e30e50ed1d1a.png)
+![image](https://user-images.githubusercontent.com/41967014/163308908-3cc06253-645e-4314-bccc-2e7b2ebf0f33.png)
+![image](https://user-images.githubusercontent.com/41967014/163308918-a1438b68-d19b-41c1-bb8a-bff4f9f11a48.png)
+![image](https://user-images.githubusercontent.com/41967014/163308963-43282103-51a1-4bf8-908b-cb1858f5750c.png)
+![image](https://user-images.githubusercontent.com/41967014/163308981-d2216c58-7ac7-40f3-a187-5eadbaea7466.png)
+![image](https://user-images.githubusercontent.com/41967014/163309139-23a0f0cf-59fc-4e8d-97a6-c7400aaef872.png)
 
 ### Reference
 - https://arxiv.org/abs/2203.02155
