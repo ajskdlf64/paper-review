@@ -30,7 +30,7 @@ Open AI / 2022.03 / Alignment / Computation and Language
   - InstructGPT models show improvements in truthfulness over GPT-3.
   - InstructGPT shows small improvements in toxicity over GPT-3, but not bias.
   - We can minimize performance regressions on public NLP datasets by modifying our RLHF fine-tuning procedure.
-  - Our models generalize to the preferences of “held-out” labelers that did not produce any train- ing data.
+  - Our models generalize to the preferences of “held-out” labelers that did not produce any training data.
   - Public NLP datasets are not reflective of how our language models are used.
   - InstructGPT models show promising generalization to instructions outside of the RLHF fine- tuning distribution.
   - InstructGPT still makes simple mistakes.
