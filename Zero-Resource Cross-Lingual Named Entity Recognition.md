@@ -36,8 +36,10 @@
 
 #### Word-level Adversarial Mapping 
 ![image](https://user-images.githubusercontent.com/41967014/172874688-41bf824e-8c4c-47fc-9f1b-fed5ce76c67a.png)
-- ㅇㅇㅇ ㅇㅇㅇㅇ
-- ㅇㅇㅇ ㅇㅇㅇㅇ
+- $W_{t->s}$는 target에서 source로의 linear mapping weight를 의미
+- $\theta_{D}$는 Discriminator D (Binary Classifier)의 parameter를 의미
+- Discriminator의 역할은 $z$가 source(src=1)에서 왔는지, target-to-source mapping(src=0)에서 왔는지를 구별하는 역할
+- 따라서 mapper $W_{t->s}$는 Discriminator D와 함께 학습됨.
 
 *******
 ### Augmented Fine-Tuning
