@@ -1,6 +1,27 @@
 # Zero-Resource Cross-Lingual Named Entity Recognition
 
-<img width="100%" alt="image" src="https://user-images.githubusercontent.com/41967014/172783205-663af5e1-53b9-4584-8dcb-33a9d5e1d32b.png">
+<img width="33%" alt="image" src="https://user-images.githubusercontent.com/41967014/172783205-663af5e1-53b9-4584-8dcb-33a9d5e1d32b.png">
+
+### 요약
+- source 언어로 NER 모델을 학습한 후 unsupervised인 target 언어의 NER 모델로 transfer하자!
+- 영어 태깅 데이터셋으로 NER 모델 학습 -> 영어-한국어 매칭 매트릭스 학습 -> augmented fine-tuning
+  - 기존의 Bi-LSTM + CRF 방법으로 영어 NER 모델을 학습
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Abstact
 > Recently, neural methods have achieved state-of-the-art (SOTA) results in Named Entity Recognition (NER) tasks for many languages without the need for manually crafted features. However, these models still require manually annotated training data, which is not available for many languages. In this paper, we propose an unsupervised cross-lingual NER model that can transfer NER knowledge from one language to another in a completely unsupervised way without relying on any bilingual dictionary or parallel data. Our model achieves this through word-level adversarial learning and augmented fine-tuning with parameter sharing and feature augmentation. Experiments on five different languages demonstrate the effectiveness of our approach, outperforming existing models by a good margin and setting a new SOTA for each language pair.
@@ -25,6 +46,18 @@
 - 먼저, 각 토큰($w_k$)에 대하여 chracter-level Bi-LSTM으로 인코딩
 
 ## Cross-lingual Model
+- 목표는 source와 target 언어 사이의 NER Entity 분포들의 매핑을 학습하는 것
+- NER에 대한 Neural Method들은 fixed or contextualized pre-trained embeddings에 과하게 의존함.
+- 그러나 2개의 서로 다른 언어들에 대하여 각각 embedding을 학습할 때, 그들의 distribution spaces는 관련된 언어들이라고 해도 전혀 다른 양상을 갖는다.
+![image](https://user-images.githubusercontent.com/41967014/172836147-2f9fac3f-c66d-4cf3-919b-0fd9de4b1e9a.png)
+- Figure3에서 (a)를 보면, 영어와 스페인어에 대한  t-SNE plot인데 분포가 완전 다르다.
+- (b)는 adversarial training을 적용한 경우, (c)는 our common encoder를 적용한 경우.
+- 결국 Cross-Lingual Model은 (a)의 두 언어에 대해서 NER 태깅 정보를 반영하면서 (c)의 형태로 학습하는 매우 챌린징한 테스크.
+- 본 연구에서 3가지 새로운 요소를 base model에 추가.
+  - a separate encoder for the target language with shared character embeddings (box on the right) followed by a target-specific dense layer,
+  - wordlevel adversarial mappers that can map word embeddings from one language to another (shown in the middle of the two boxes)
+  - an augmented fine-tuning method with parameter sharing and feature augmentation.
+
 ### target encoder with shared character embedding
 ### word-level adversarial mapping
 ### augmented fine-tuning
