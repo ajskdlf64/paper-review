@@ -31,4 +31,5 @@
   - generating psudo target labels
   - joint training with feature augmentation
 - Example
-  - 
+  - "The capital city of Korea<LOC> is Seoul<LOC>." 이라는 soruce 문장을 "한국<LOC>의 수도는 서울<LOC>이다." 이라는 target 문장으로 바꾼다고 생각하자.
+  
