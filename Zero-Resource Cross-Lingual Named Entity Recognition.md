@@ -29,10 +29,6 @@
 - 학습의 주요 목표는 source 와 target 언어 사이의 NER Entity 분포의 매핑을 배우는 것
 - 즉, 위의 그림에서 (a)를 (c)로 만드는 것
 
-
-
-
-
 *******
 ### Augmented Fine-Tuning
 - "The capital city of Korea<LOC> is Seoul<LOC>." 을 이용해 source ner model을 학습. (이 때 word embedding and chracter embedding을 동시 사용.)
