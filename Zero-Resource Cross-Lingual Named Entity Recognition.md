@@ -41,7 +41,10 @@
 - Discriminator의 역할은 $z$가 source(src=1)에서 왔는지, target-to-source mapping(src=0)에서 왔는지를 구별하는 역할
 - 따라서 mapper $W_{t->s}$는 Discriminator D와 함께 학습됨.
 - (3)번 loss
-  - 
+  - $W_{t->s}$는 고정되고, 즉 target에서 source로 embedding 변환을 제대로 한다고 가정
+  - target embedding의 y를 x로 보내서 source embedding이 되지만 Discriminator 입장에서는 변환된 embedding의 출처는 target이다 라는 것을 학습시키는 것임
+  - 여기서 source와 target embedding은 word embedding이니까 고정의 개념이고, 즉 Discriminator가 제대로 embedding의 출처를 구별하도록 Discriminator가 학습되는 것
+  - 오른쪽 term은 변환되지 않은 기본 embedding Discriminator를 구별하도록 학
 - (4)번 loss
   - $D$의 파라미터가 고정이고, 즉 Discriminator가 embedding의 출처를 제대로 구별한다고 가정
   - Discriminator를 속이기 위해서 adversarial learning의 개념으로 $W_{t->s}$를 학습
