@@ -16,33 +16,27 @@
 *******
 ### Source Base Model
 ![image](https://user-images.githubusercontent.com/41967014/172803378-0d33c383-78d2-4423-a45d-c09461de3980.png)
+1. char를 공유하는 2개의 언어에 대해서 가능(한국어-영어 X / 영어-스페인어 O) -> char embedding을 공유.
+2. 각각의 언어별로 인코더를 만들고 공유하는 common encoder를 만듬.
+   - 이 때, 독립된 인코더는 orthographic 속성들을 중점으로 학습(대문자, 접두사, 접미사 등)
+   - 공유하는 인코더는 source 에서 target으로 변환시키는데 집중
+3. source와 target에 대해서 각각의 word embedding이 존재
+4. 이 때 2개의 word embedding의 파라미터 공유를 위해서 W Matrix를 두어 학습.
 
 *******
 ### Cross-Lingual Model
+![image](https://user-images.githubusercontent.com/41967014/172858632-e191a3ec-e70d-40ab-b8ac-6f688f824f59.png)
+- 학습의 주요 목표는 source 와 target 언어 사이의 NER Entity 분포의 매핑을 배우는 것
+- 즉, 위의 그림에서 (a)를 (c)로 만드는 것
+
+
+
+
 
 *******
 ### Augmented Fine-Tuning
-- word-level adversarial training은 단어를 독립적으로 매핑함.
-- 그러나 NER은 Sequence Labeling task이고, word order는 각 언어에 따라 다르다.
-- word-level corss-lingual mapping은 NER Tagging 정보를 고려하지 않고 단순히 word translation model이다.
-![image](https://user-images.githubusercontent.com/41967014/172858632-e191a3ec-e70d-40ab-b8ac-6f688f824f59.png)
-- 위의 그림처럼 각 word가 translation이 되지만, Entity별로 Clustering은 되지 않음.
-- target encoder에서 target language ordering information과 source model의 NER Knowledge을 transfer하는 것을 동시에 배우기 위해서 새로운 학습법인 `augmented fine-tuning method`를 제시함.
-  - source model pre-training through weight sharing
-  - generating psudo target labels
-  - joint training with feature augmentation
-- Example
-  - "The capital city of Korea<LOC> is Seoul<LOC>." 이라는 soruce 문장을 "한국<LOC>의 수도는 서울<LOC>이다." 이라는 target 문장으로 바꾼다고 생각하자.
-  - 하지만, 단순히 word translation을 통해서 변환한다고 해도 순서를 제대로 맞출수 없고, NER tagging 정보를 고려할 수 없음.
-  - chracter embedding과 word embedding의 파라미터를 공유하여 해결 (알파벳이 공유된 언어들끼리만 가능. 한국어-영어 사이는 불가능)
-  - base model의 노란색 그림 : source feature embedding을 target embedding에 공유해서 사용.
-![image](https://user-images.githubusercontent.com/41967014/172868150-f626e96c-c9ab-4188-9df1-7002061dde7f.png)
-  - 다시 정리하면,
-     - "The capital city of Korea<LOC> is Seoul<LOC>." 을 이용해 source ner model을 학습. (이 때 word embedding and chracter embedding을 동시 사용.)
-     - "한국<LOC>의 수도는 서울<LOC>이다." 을 이용해 target ner model을 학습. 이 때 저렇게 완벽한 문장이 들어가는 것이 아니라 (학습된 word/char embedding을 통해 변환된 벡터값을 사용.)
-     - source 문장 학습 시, 만든 feature embedding을 target ner model에 활용.
-  - 번외로, 문장의 길이가 길어질수록 노이즈가 많이 낄텐데, stochastic selection method을 사용하여 해결.
+- "The capital city of Korea<LOC> is Seoul<LOC>." 을 이용해 source ner model을 학습. (이 때 word embedding and chracter embedding을 동시 사용.)
+- "한국<LOC>의 수도는 서울<LOC>이다." 을 이용해 target ner model을 학습. 이 때 저렇게 완벽한 문장이 들어가는 것이 아니라 (학습된 word/char embedding을 통해 변환된 벡터값을 사용.)
+- source 문장 학습 시, 만든 feature embedding을 target ner model에 활용.
+- 번외로, 문장의 길이가 길어질수록 노이즈가 많이 낄텐데, stochastic selection method을 사용하여 해결.
   - 제안한 stochastic training 스케줄 길이는 모델이 short와 long 문장들 사이의 learning-inference gap을 해결할 수 있다.
-![image](https://user-images.githubusercontent.com/41967014/172869923-0d75b921-e36a-4360-be6c-5a5e332d4d94.png)
-
-  
