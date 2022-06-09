@@ -29,6 +29,16 @@
 - 학습의 주요 목표는 source 와 target 언어 사이의 NER Entity 분포의 매핑을 배우는 것
 - 즉, 위의 그림에서 (a)를 (c)로 만드는 것
 
+#### Target Encoder with Shared Character Embedding
+- target encoder는 source 인코더와 동일한 구조
+- 알파벳을 공유하는 언어들에 대해서 초기에 매핑을 위해 사용
+- 중반 이후에는 word-level의 매핑을 배우기 위해서 adversarial 접근법을 사용
+
+#### Word-level Adversarial Mapping 
+![image](https://user-images.githubusercontent.com/41967014/172874688-41bf824e-8c4c-47fc-9f1b-fed5ce76c67a.png)
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+
 *******
 ### Augmented Fine-Tuning
 - "The capital city of Korea<LOC> is Seoul<LOC>." 을 이용해 source ner model을 학습. (이 때 word embedding and chracter embedding을 동시 사용.)
