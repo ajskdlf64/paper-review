@@ -9,6 +9,7 @@
   - 기존의 Bi-LSTM + CRF 방법으로 영어 NER 모델을 학습
   - "I"라는 영어 단어와 "나"라는 한글 단어가 매칭되는 Matrix 학습하기
   - 태깅된 source 데이터셋을 태깅된 target 데이터셋으로 변환하여 fine-tuning
+- 알파벳을 공유하는 2개의 언어에 대해서 공유되는 character embedding과 각각의 학습된 word embedding을 이용
 - 5개의 언어에 대해서 실험 진행(English, Spanish, Dutch, German, Arabic, Finnish)
 > KEY POINT : "어떻게 source-target 간의 matrix를 찾는가?" and "target 데이터에 대하여 labeled dataset을 어떻게 만들어 내는가?"
 
