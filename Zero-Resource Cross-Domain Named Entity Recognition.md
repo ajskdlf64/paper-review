@@ -9,3 +9,15 @@ We first introduce a Multi-Task Learning (MTL) by adding a new objective functio
 We then introduce a framework called Mixture of Entity Experts (MoEE) to improve the robustness for zero-resource domain adaptation. 
 Finally, ex- perimental results show that our model outperforms strong unsupervised cross-domain sequence labeling models, 
 and the performance of our model is close to that of the state-of-the-art model which leverages extensive resources.
+
+![image](https://user-images.githubusercontent.com/41967014/172761964-159dae2b-a8c8-4945-a8f9-54b0c94ab19b.png)
+
+![image](https://user-images.githubusercontent.com/41967014/172761986-ee672ce3-074d-4f92-880f-7f8c724e195c.png)
+
+![image](https://user-images.githubusercontent.com/41967014/172761998-23354d16-d170-4cc7-8d68-dc11722abfb7.png)
+
+![image](https://user-images.githubusercontent.com/41967014/172762012-57773f42-f4d5-48c8-9e40-7feff245d73c.png)
+
+![image](https://user-images.githubusercontent.com/41967014/172762033-52030363-e282-40b3-a773-0d6fa3e01bc2.png)
+
+![image](https://user-images.githubusercontent.com/41967014/172762042-865b82db-178d-4af6-9aaf-71933b583fc4.png)
