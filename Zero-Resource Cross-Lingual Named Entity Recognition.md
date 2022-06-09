@@ -40,6 +40,12 @@
 - $\theta_{D}$는 Discriminator D (Binary Classifier)의 parameter를 의미
 - Discriminator의 역할은 $z$가 source(src=1)에서 왔는지, target-to-source mapping(src=0)에서 왔는지를 구별하는 역할
 - 따라서 mapper $W_{t->s}$는 Discriminator D와 함께 학습됨.
+- (3)번 loss
+  - 
+- (4)번 loss
+  - $D$의 파라미터가 고정이고, 즉 Discriminator가 embedding의 출처를 제대로 구별한다고 가정
+  - Discriminator를 속이기 위해서 adversarial learning의 개념으로 $W_{t->s}$를 학습
+  - (3)번식과 반대의 방법으로 loss를 측정.
 
 *******
 ### Augmented Fine-Tuning
