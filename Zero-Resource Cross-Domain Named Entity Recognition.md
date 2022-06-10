@@ -3,17 +3,28 @@
 
 *******
 ### Summary
-
+- 여러 도메인을 처리할 수 있는 NER 모델을 만들자
+- MoE의 Expert 개념을 도입해서 Entity Experts를 도입 
+- 일반적인 BiLSTM-CRF를 활용한 모델에 MoE와 MTL 모듈을 결합
 
 *******
 ### Model Architecture
 ![image](https://user-images.githubusercontent.com/41967014/172986136-f6904005-0628-44bb-a66a-2ccb3ee3a269.png)
 - 모델 구조는 MTL과 MoEE 모듈을 결합한 BiLSTM-CRF 모델
-
+- 그림 (a)의 왼쪽은 일반적인 BiLSTM-CRF를 결합한 모델
 
 *******
 ### Mixture of Entity Experts
-
+<img width="396" alt="image" src="https://user-images.githubusercontent.com/41967014/173003665-9934314d-9700-40a4-a5d5-d54493c19696.png">
+- 전통적인 NER 모델은 features of the tokens and the context에 기반하여 예측함
+- 다른 entity 간의 confusion으로 인해 domain에 쉽게 overfit되고 generalization이 어려움
+- 따라서 위의 그림의 (b)의 MoEE 프레임워크를 이용해서 이를 해결
+- MoEE가 생성한 featrue과 기존 feature를 결합하여 예측을 진행
+- 각각의 Entity Experts는 linear layer 구조를 갖는다
+- Entity가 아닌 것은 하나의 특수 Entity로 간주한다
+- expert gate는 linear layer + softmax layer를 결합한 모양임. 이를 통해 entity experts의 confidence distribution을 생성함
+- 이제 전이시킬 $Task_2$의 gold label을 이용해서 expert gate를 학습시킴
+- 마지막으로 meta-expert를 통해서 모든 experts들의 feature를 통합함
 
 *******
 ### Optimization
