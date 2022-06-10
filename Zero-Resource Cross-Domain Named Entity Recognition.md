@@ -13,7 +13,8 @@
 - 모델 구조는 MTL과 MoEE 모듈을 결합한 BiLSTM-CRF 모델
 - 그림 (a)의 왼쪽은 일반적인 BiLSTM-CRF를 결합한 모델
 - 보통은 NER에서 softmax 값을 통해 어떤 entity로 쓰였는지 판별하는데, 여기서는 여러 도메인에 적용하기 위해 바로 예측하는게 아니라 일단 사전에 정의된 엔티티인지 아닌지를 먼저 판별
-- 그 다음 어떤 엔티티인지에 대해서는 MoE 모듈을 이용해서 confidence 값으로 구체적인 엔티티를 
+- 그 다음 어떤 엔티티인지에 대해서는 MoE 모듈을 이용해서 confidence 값으로 구체적인 엔티티를 예측
+- MoE 모듈에서 Expert는 늘리고 줄이고 가능하기에 few shot 으로 $Task_2$의 엔티티를 금방 만들 수 있나?
 
 *******
 ### Mixture of Entity Experts
