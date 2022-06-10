@@ -21,3 +21,10 @@
 - 학습과정중에 $Task_1$, $Task_2$ and $Gate$에 대하여 cross-entropy를 활용함.
 - $J$는 학습 데이터의 수, $|Y_j|$는 토큰의 길이, $p_{jk}$와 $y_{jk}$는 각각의 토큰에 대한 예측과 레이브, 첨자는 각각의 Task를 의미
 - 최종 목적 함수는 앞서 언급한 모든 손실 함수의 합을 최소화 하는 것
+
+*******
+### Results
+![image](https://user-images.githubusercontent.com/41967014/172987792-b1701aaa-d5fa-4d17-9811-7dd5d5bd2c81.png)
+- 문장이 들어오면, 각각의 Entity Expert에 대해서 각각의 토큰들에 대해서 confidence score를 계산
+- "Drudge"의 경우 `PER`과 `ORG`가 헷갈릴 수 있음
+- 이럴 때는 ???
