@@ -16,6 +16,7 @@
 *******
 ### Mixture of Entity Experts
 <img width="396" alt="image" src="https://user-images.githubusercontent.com/41967014/173003665-9934314d-9700-40a4-a5d5-d54493c19696.png">
+
 - 전통적인 NER 모델은 features of the tokens and the context에 기반하여 예측함
 - 다른 entity 간의 confusion으로 인해 domain에 쉽게 overfit되고 generalization이 어려움
 - 따라서 위의 그림의 (b)의 MoEE 프레임워크를 이용해서 이를 해결
