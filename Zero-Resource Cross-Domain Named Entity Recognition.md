@@ -42,4 +42,4 @@
 ![image](https://user-images.githubusercontent.com/41967014/172987792-b1701aaa-d5fa-4d17-9811-7dd5d5bd2c81.png)
 - 문장이 들어오면, 각각의 Entity Expert에 대해서 각각의 토큰들에 대해서 confidence score를 계산
 - "Drudge"의 경우 `PER`과 `ORG`가 헷갈릴 수 있음
-- “Drudge”, the expert gate gives high confidence on more than one expert (e.g., “PER” and “ORG”) since the model is not sure whether “Drudge” is a “PER” or “ORG”. Our model is ex- pected to learn the “PER” and “ORG” expert rep- resentations based on the hidden state of “Drudge”, which contains the information of this token and its context, and then combine the expert represen- tations for the prediction.
+- “Drudge”, the expert gate gives high confidence on more than one expert (e.g., “PER” and “ORG”) since the model is not sure whether “Drudge” is a “PER” or “ORG”. Our model is expected to learn the “PER” and “ORG” expert rep- resentations based on the hidden state of “Drudge”, which contains the information of this token and its context, and then combine the expert represen- tations for the prediction.
