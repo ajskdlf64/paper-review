@@ -12,6 +12,7 @@
 ![image](https://user-images.githubusercontent.com/41967014/172986136-f6904005-0628-44bb-a66a-2ccb3ee3a269.png)
 - 모델 구조는 MTL과 MoEE 모듈을 결합한 BiLSTM-CRF 모델
 - 그림 (a)의 왼쪽은 일반적인 BiLSTM-CRF를 결합한 모델
+- 
 
 *******
 ### Mixture of Entity Experts
