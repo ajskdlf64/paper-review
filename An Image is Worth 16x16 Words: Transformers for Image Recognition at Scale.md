@@ -97,13 +97,15 @@
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
 **Inspecting Vision Transformer**
+- <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
 - ㅇㅇㅇ ㅇㅇㅇㅇ
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
 **Self-Supervision**
-- <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
-- ㅇㅇㅇ ㅇㅇㅇㅇ
-- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+- `Transformer` 기반 모델들은 `NLP task`에서 인상적인 포퍼먼스를 보여줌
+- 그러나 핵심은 대규모의 데이터셋을 활용한 `self-supervised pre-training`으로부터 비롯됨
+- 본 연구에서는 `BERT`의 `pre-training task` 중 하나인 `masked language modeling`을 모방하여 `masked patch prediction for self-supervision`을 실험해보았고, 그 결과 유의미한 성능 향상을 발견함
+- 그러나 여전히 `supervised pre-training`보다는 많이 못미치는 성능
 
 ********
 ### Conclusion
