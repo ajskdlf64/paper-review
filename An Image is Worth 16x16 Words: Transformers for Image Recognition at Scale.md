@@ -34,9 +34,51 @@
 
 - ㅇㅇㅇ ㅇㅇㅇ
 
+**ViT : Vision Transformer**
+- ㅇㅇㅇ ㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+
+**Hybrid Architecture**
+- ㅇㅇㅇ ㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+
+**Fine-Tuning and Higher Resolution**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+
 ********
 ### Experiments
+**Setup**
+- Datasets
+  - ㅇㅇㅇ ㅇㅇㅇ
+- Model Variants
+  - ㅇㅇㅇ ㅇㅇㅇㅇ
+- Training & Fine-Tuning
+  - ㅇㅇㅇ ㅇㅇㅇㅇ
+- Metrics
+  - ㅇㅇㅇ ㅇㅇㅇㅇ
 
+**Comparison to State of the Art**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+
+**Pre-Training Data Requirements**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+
+**Scaling Study**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+
+**Inspecting Vision Transformer**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+
+**Self-Supervision**
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
 ********
 ### Conclusion
+- ㅇㅇㅇ ㅇㅇㅇㅇ
+- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
