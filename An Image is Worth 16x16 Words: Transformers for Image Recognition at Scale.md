@@ -1,5 +1,5 @@
 # An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
-
+- https://arxiv.org/abs/2010.11929
 <img width="50%" alt="image" src="https://user-images.githubusercontent.com/41967014/173275878-f2ad04d2-05e1-4e32-957d-b621b5c4fc4e.png">
 
 ********
