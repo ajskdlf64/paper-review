@@ -26,7 +26,7 @@
 - 이는 픽셀 수에 따라서 `Quadratic`한 계산 복잡도를 가지며, Input 이미지의 화질이 좋아질수록 기하급수적으로 계산량이 늘어남
 - 이를 해결하기 위해 몇가지 `Approximation Method`들이 시도됨
   - local self-attention, sparse attention, applying it in blocks of varying size ...
-- 위의 방법들을 사용하면 어느 정도 성능은 보장되나 하드웨어를 효율적으로 사용하기 위해 복잡한 엔지니어링 기술이 필요함 
+- 위의 방법들을 사용하면 어느 정도 성능은 보장되나 하드웨어를 효율적으로 사용하기 위해 `복잡한 엔지니어링` 기술이 필요함 
 
 ********
 ### Method
