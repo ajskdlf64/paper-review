@@ -82,12 +82,11 @@
 **Comparison to State of the Art**
 - <img width="406" alt="image" src="https://user-images.githubusercontent.com/41967014/173300666-b4c0a2fe-35db-4c16-9a1d-e1575ff8f05d.png">
 - <img width="400" alt="image" src="https://user-images.githubusercontent.com/41967014/173300863-c6b8d29d-e939-4113-9070-c4a7ba6949f5.png">
-- <img width="399" alt="image" src="https://user-images.githubusercontent.com/41967014/173300897-dda420a4-68be-4f1f-9172-9cdf5734d76f.png">
-
 - ㅇㅇㅇ ㅇㅇㅇㅇ
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
 **Pre-Training Data Requirements**
+- <img width="399" alt="image" src="https://user-images.githubusercontent.com/41967014/173300897-dda420a4-68be-4f1f-9172-9cdf5734d76f.png">
 - ㅇㅇㅇ ㅇㅇㅇㅇ
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
