@@ -7,4 +7,6 @@
 - 기존에는 `Computer Vision` 분야에서는 `CNN`과 `Attention이` 혼합되어 사용되었지만, `Attention`만 순수하게 사용
 - 좋은 성능을 내기 위해서는 `Large Dataset`에 대한 `Supervised Pre-Training`이 필요함
 
-### 
+### Introduction
+- 이미지에 시퀀스 모델인 `Transformer`를 도입시키기 위해서 `Patch` 개념을 추가
+- 하나의 이미지에 대해서 작은 `Patch`로 분할하고 이 `Patch`들의 `Linear Embedding`의 시퀀스를 `Transformer`의 `Input`으로 전달
