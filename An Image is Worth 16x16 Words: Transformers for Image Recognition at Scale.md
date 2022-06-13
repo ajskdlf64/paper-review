@@ -3,13 +3,13 @@
 <img width="50%" alt="image" src="https://user-images.githubusercontent.com/41967014/173275878-f2ad04d2-05e1-4e32-957d-b621b5c4fc4e.png">
 
 ********
-## Summary
+### Summary
 - `Computer Vision` 분야에 기존 `NLP`의 강자인 `Transformer` 모델을 접목시켜 성공한 사례
 - 기존에는 `Computer Vision` 분야에서는 `CNN`과 `Attention이` 혼합되어 사용되었지만, `Attention`만 순수하게 사용
 - 좋은 성능을 내기 위해서는 `Large Dataset`에 대한 `Supervised Pre-Training`이 필요함
 
 ********
-## Introduction
+### Introduction
 <img width="240" alt="image" src="https://user-images.githubusercontent.com/41967014/173277382-e86e3bcc-d817-47ba-aad9-b72f9597b641.png">
 
 - 이미지에 시퀀스 모델인 `Transformer`를 도입시키기 위해서 `Patch` 개념을 추가
@@ -21,7 +21,7 @@
 - 즉, `ViT`로 충분히 큰 데이터셋에 대해서 `Pre-Training`을 진행하고 작은 데이터셋에 대하여 `fine-tuning`을 진행하게 되면 `SoTA`를 달성할 수 있음
 
 ********
-## Related Work
+### Related Work
 - 이미지에 대한 `self-attention`의 적용은 각각의 `픽셀`들이 `Token` 개념으로 하나의 픽셀에 대해서 다른 모든 픽셀에 대한 `Attention`을 계산해야 함
 - 이는 픽셀 수에 따라서 `Quadratic`한 계산 복잡도를 가지며, Input 이미지의 화질이 좋아질수록 기하급수적으로 계산량이 늘어남
 - 이를 해결하기 위해 몇가지 `Approximation Method`들이 시도됨
@@ -29,14 +29,14 @@
 - 위의 방법들을 사용하면 어느 정도 성능은 보장되나 하드웨어를 효율적으로 사용하기 위해 복잡한 엔지니어링 기술이 필요함 
 
 ********
-## Method
+### Method
 <img width="100%" alt="image" src="https://user-images.githubusercontent.com/41967014/173279449-27a97f45-4477-4970-8325-3a047f35c829.png">
 
 - ㅇㅇㅇ ㅇㅇㅇ
 
 ********
-## Experiments
+### Experiments
 
 
 ********
-## Conclusion
+### Conclusion
