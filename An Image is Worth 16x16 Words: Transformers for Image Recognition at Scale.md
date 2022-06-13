@@ -93,9 +93,9 @@
 **Scaling Study**
 - <img width="404" alt="image" src="https://user-images.githubusercontent.com/41967014/173300917-84e33ef8-ca71-4cc1-b276-50e874ae317e.png">
 - `JFT-300M` 데이터셋으로 `transfer learning`의 성능 평가를 수행하는데 각각의 모델의 `performance vs pre-training cost`를 평가함
-- ResNet 계열 7개의 모델, ViT 계열 6개의 모델, Hybrid 계열 모델 5개를 고랴함
-- ViT 계열(파란점) 모델들이 ResNet 계열(회색점)보다 성능이 좋음
-- 동일 성능을 위해서 ResNet 계열 모델들이 2배 ~ 4배 가량의 cost가 더 필요
+- `ResNet` 계열 7개의 모델, `ViT` 계열 6개의 모델, `Hybrid` 계열 모델 5개를 고랴함
+- `ViT 계열(파란점)` 모델들이 `ResNet 계열(회색점)`보다 성능이 좋음
+- 동일 성능을 위해서 `ResNet` 계열 모델들이 `2배 ~ 4배` 가량의 cost가 더 필요
 
 **Inspecting Vision Transformer**
 - <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
