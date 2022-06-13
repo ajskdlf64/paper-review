@@ -80,5 +80,13 @@
 
 ********
 ### Conclusion
-- ㅇㅇㅇ ㅇㅇㅇㅇ
-- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+**Contribution**
+- Computer Vision 분야에 Transformer 모델을 성공적으로 도입시킴
+- 이전에 Self-Attention을 Vision에 접목시킨 연구들과는 다르게 이미지에 특화된 어떤 Inductive Bias를 추가하지 않음
+- 이미지를 Patch 단위로 쪼개고 그 Patch를 Token 개념으로 사용
+- 대용량 데이터셋을 이용해서 Pre-Training하면 성능이 매우 좋음
+**Future research**
+- `Image Detection`이나 `Image Segmentation` 등의 Task 확장
+- `Self-Supervised Pre-Training` 방법의 최적화
+- 성능 향상을 위한 `ViT`의 업그레이드
+
