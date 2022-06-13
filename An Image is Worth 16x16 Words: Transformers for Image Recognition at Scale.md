@@ -99,8 +99,8 @@
 
 **Inspecting Vision Transformer**
 - <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
-- ㅇㅇㅇ ㅇㅇㅇㅇ
-- ㅇㅇㅇ ㅇㅇㅇㅇㅇ
+- ViT가 어떻게 이미지 처리를 하는지 이해하기 위해 내부 representation을 분석함
+- 
 
 **Self-Supervision**
 - `Transformer` 기반 모델들은 `NLP task`에서 인상적인 포퍼먼스를 보여줌
