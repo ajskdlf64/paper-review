@@ -30,7 +30,9 @@
 
 ********
 ## Method
+<img width="100%" alt="image" src="https://user-images.githubusercontent.com/41967014/173279449-27a97f45-4477-4970-8325-3a047f35c829.png">
 
+- ㅇㅇㅇ ㅇㅇㅇ
 
 ********
 ## Experiments
