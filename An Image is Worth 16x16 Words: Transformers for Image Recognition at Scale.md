@@ -4,6 +4,7 @@
 
 ********
 ### Summary
+![vit](https://user-images.githubusercontent.com/41967014/173297655-78584f26-7cab-4e72-9c7f-0c1462189a07.gif)
 - `Computer Vision` 분야에 기존 `NLP`의 강자인 `Transformer` 모델을 접목시켜 성공한 사례
 - 기존에는 `Computer Vision` 분야에서는 `CNN`과 `Attention이` 혼합되어 사용되었지만, `Attention`만 순수하게 사용
 - 좋은 성능을 내기 위해서는 `Large Dataset`에 대한 `Supervised Pre-Training`이 필요함
@@ -50,15 +51,40 @@
 ### Experiments
 **Setup**
 - Datasets
-  - ㅇㅇㅇ ㅇㅇㅇ
+  - Pre-Trained
+    - ImageNet / 1k classes and 1.3M images
+    - ImageNet-21k / 21k classes and 14M images
+    - JFT / 18 classes and 303M high-resolution images
+  - Fine-Tuning
+    - ImagetNet holdout set / 
+    - ImagetNet Real / 
+    - CIFAR-10 / 
+    - CIFAR-100 / 
+    - Oxford-IIIT Pets / 
+    - Oxford Flowers-102 / 
+    - 19-task VTAB / 각 task마다 1,000개의 train dataset으로 학습하고 평가
 - Model Variants
-  - ㅇㅇㅇ ㅇㅇㅇㅇ
+  - <img width="50%" alt="image" src="https://user-images.githubusercontent.com/41967014/173298808-2a636c37-630d-46b2-bbd1-c4ba2b982e8f.png">
+  - 다양한 사이즈의 모델을 생성
+  - Base와 Large는 BERT 논문에 공개된 모델과 완전 동일
+  - 더 큰 규모의 Huge 모델을 추가
+  - ViT-L/16의 의미는 ViT-Large 모델에 16x16 패치를 적용한 모델
+  - 비교 모델로 Baseline CNN 모델은 RwesnNet을 사용. 이 때 Batch Normalization을 Group Normalization으로 교체하고 Standard Convolution을 사용 이런 모델을 ResNet(BiT)로 표기
 - Training & Fine-Tuning
-  - ㅇㅇㅇ ㅇㅇㅇㅇ
+  - 옵티마이저는 Adam을 사용
+  - $\beta_1 = 0.9$, $\beta_2 = 0.999$, $batch-size = 4,096$
+  - Weight Decay 적용 -> 모델의 tranfer learning시 도움을 줌
+  - Learning Schedule : linear learning rate warmup and decay
+  - Fine-Tuning할 때는 SGD with momentum 옵티마이저를 사용, $batch-size = 512$
 - Metrics
-  - ㅇㅇㅇ ㅇㅇㅇㅇ
+  - 모델의 평가는 Downstream Task에 대하여 few-shot accuracy or fine-tuning accuracy로 평가를 진행
 
 **Comparison to State of the Art**
+- <img width="406" alt="image" src="https://user-images.githubusercontent.com/41967014/173300666-b4c0a2fe-35db-4c16-9a1d-e1575ff8f05d.png">
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/41967014/173300863-c6b8d29d-e939-4113-9070-c4a7ba6949f5.png">
+- <img width="399" alt="image" src="https://user-images.githubusercontent.com/41967014/173300897-dda420a4-68be-4f1f-9172-9cdf5734d76f.png">
+- <img width="404" alt="image" src="https://user-images.githubusercontent.com/41967014/173300917-84e33ef8-ca71-4cc1-b276-50e874ae317e.png">
+
 - ㅇㅇㅇ ㅇㅇㅇㅇ
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
@@ -75,6 +101,7 @@
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
 **Self-Supervision**
+- <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
 - ㅇㅇㅇ ㅇㅇㅇㅇ
 - ㅇㅇㅇ ㅇㅇㅇㅇㅇ
 
