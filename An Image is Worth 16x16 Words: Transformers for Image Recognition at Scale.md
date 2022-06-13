@@ -99,8 +99,13 @@
 
 **Inspecting Vision Transformer**
 - <img width="403" alt="image" src="https://user-images.githubusercontent.com/41967014/173300984-d42cc0a7-1004-4153-b1de-d7d150ce82da.png">
+- ![Uploading image.png…]()
 - ViT가 어떻게 이미지 처리를 하는지 이해하기 위해 내부 representation을 분석함
-- 
+- 첫번째 층은 flatten으로 들어온 patch들을 저차원 공간으로 Lineary Project 함
+- 왼쪽 그림의 PCA 결과를 보면 각각의 성분들은 각 패치 내의 미세구조의 저차원적 표현을 위한 기저함수를 닮음
+- 그 이후에는 학습된 position embedding이 patch representation에 추가 -> 가운데 그림은 모델이 Position Embedding의 유사도 내에서 이미지 내부의 거리개념을 인코딩하는 방법을 배우는 것을 보여줌
+- 즉, 가까운 패치들은 유사한 Position Embedding을 가지며 같은 행/열에 있는 patch는 유사한 embedding을 갖는다는 것을 알 수 있음
+- 모델에 position embedding을 추가하고 안하고는 성능 차이가 크며 1d vs 2d 차이는 거의 없으며 오히려 1d가 더 나음
 
 **Self-Supervision**
 - `Transformer` 기반 모델들은 `NLP task`에서 인상적인 포퍼먼스를 보여줌
