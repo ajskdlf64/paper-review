@@ -15,15 +15,18 @@
 - 이미지에 시퀀스 모델인 `Transformer`를 도입시키기 위해서 `Patch` 개념을 추가
 - 하나의 이미지에 대해서 작은 `Patch`로 분할하고 이 `Patch`들의 `Linear Embedding`의 시퀀스를 `Transformer`의 `Input`으로 전달
 - 이미지의 `Patch`는 `v`에서 `Token`과 같은 개념의 역할
-- mageNet과 같은 mid-size 데이터셋에 대해서의 결과와 비슷한 사이즈의 ResNet-like architecture 모델들과 비교했을 때 정확도가 떨어짐
-- 데이터셋이 충분치 않으면 Generalize를 위한 모델의 고유 가정인 Inductive Biases로써 CNN 학습시에 모델에 내재되어 있는 Translation Equivariance나 Locality와 같은 부분이 Transformer에 부족하기 때문이라고 판단
-- 그러나 데이터셋이 커지면 충분히 좋은 성능을 보이는데 이는 Large Dataset Learning이 기존 CNN 계열 모델의 Inductive Bias를 능가할 수 있다는 것을 확인
-- 즉, ViT로 충분히 큰 데이터셋에 대해서 Pre-Training을 진행하고 작은 데이터셋에 대하여 fine-tuning을 진행하게 되면 SoTA를 달성할 수 
+- `mageNet`과 같은 `mid-size` 데이터셋에 대해서의 결과와 비슷한 사이즈의 `ResNet-like architecture` 모델들과 비교했을 때 정확도가 떨어짐
+- 데이터셋이 충분치 않으면 Generalize를 위한 모델의 고유 가정인 Inductive Biases로써 CNN 학습시에 모델에 내재되어 있는 `Translation Equivariance`나 `Locality`와 같은 부분이 `Transformer`에 부족하기 때문이라고 판단
+- 그러나 데이터셋이 커지면 충분히 좋은 성능을 보이는데 이는 `Large Dataset Learning`이 기존 `CNN` 계열 모델의 `Inductive Bias`를 능가할 수 있다는 것을 확인
+- 즉, `ViT`로 충분히 큰 데이터셋에 대해서 `Pre-Training`을 진행하고 작은 데이터셋에 대하여 `fine-tuning`을 진행하게 되면 `SoTA`를 달성할 수 있음
 
 ********
 ## Related Work
-
-
+- 이미지에 대한 `self-attention`의 적용은 각각의 `픽셀`들이 `Token` 개념으로 하나의 픽셀에 대해서 다른 모든 픽셀에 대한 `Attention`을 계산해야 함
+- 이는 픽셀 수에 따라서 `Quadratic`한 계산 복잡도를 가지며, Input 이미지의 화질이 좋아질수록 기하급수적으로 계산량이 늘어남
+- 이를 해결하기 위해 몇가지 `Approximation Method`들이 시도됨
+  - local self-attention, sparse attention, applying it in blocks of varying size ...
+- 위의 방법들을 사용하면 어느 정도 성능은 보장되나 하드웨어를 효율적으로 사용하기 위해 복잡한 엔지니어링 기술이 필요함 
 
 ********
 ## Method
