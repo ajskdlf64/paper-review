@@ -1,15 +1,15 @@
-## An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
+# An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
 - https://arxiv.org/abs/2010.11929
 <img width="50%" alt="image" src="https://user-images.githubusercontent.com/41967014/173275878-f2ad04d2-05e1-4e32-957d-b621b5c4fc4e.png">
 
 ********
-### Summary
+## Summary
 - `Computer Vision` 분야에 기존 `NLP`의 강자인 `Transformer` 모델을 접목시켜 성공한 사례
 - 기존에는 `Computer Vision` 분야에서는 `CNN`과 `Attention이` 혼합되어 사용되었지만, `Attention`만 순수하게 사용
 - 좋은 성능을 내기 위해서는 `Large Dataset`에 대한 `Supervised Pre-Training`이 필요함
 
 ********
-### Introduction
+## Introduction
 <img width="240" alt="image" src="https://user-images.githubusercontent.com/41967014/173277382-e86e3bcc-d817-47ba-aad9-b72f9597b641.png">
 
 - 이미지에 시퀀스 모델인 `Transformer`를 도입시키기 위해서 `Patch` 개념을 추가
@@ -21,17 +21,17 @@
 - 즉, ViT로 충분히 큰 데이터셋에 대해서 Pre-Training을 진행하고 작은 데이터셋에 대하여 fine-tuning을 진행하게 되면 SoTA를 달성할 수 
 
 ********
-### Related Work
+## Related Work
 
 
 
 ********
-### Method
+## Method
 
 
 ********
-### Experiments
+## Experiments
 
 
 ********
-### Conclusion
+## Conclusion
