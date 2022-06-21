@@ -45,9 +45,16 @@
 ### CAM
 ![image](https://user-images.githubusercontent.com/41967014/174729485-47e8ac57-f64f-4c51-a332-9873f655667b.png)
 ![image](https://user-images.githubusercontent.com/41967014/174729591-0e4b705a-c9f7-4ee3-ac64-c2a39afbf559.png)
+- $M_{c}$ = 클래스 c에 대한 Class Activation Map
+- 즉, 이미지가 클래스 c로 분류되는 경우, $(x,y)$ 위치에서의 Importance
 
+**********
+
+### Example Outputs
 ![image](https://user-images.githubusercontent.com/41967014/174729680-badb9db3-ac9b-44dd-8425-b1fb81ba461e.png)
 
+**********
 
+### 서로 다른 Class에 대한 Activation Map
+![image](https://user-images.githubusercontent.com/41967014/174730480-03e42edd-b2a8-4116-b290-c09778c63748.png)
 
-### 서로 
