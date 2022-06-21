@@ -44,6 +44,9 @@
 
 ### CAM
 ![image](https://user-images.githubusercontent.com/41967014/174729485-47e8ac57-f64f-4c51-a332-9873f655667b.png)
+- Convolutuion 층 바로 다음에 Gloval Averate Pooling(GAP)을 붙이고 Softmax를 연결하는 모델 구조
+- 예를 들어 Convolution 층의 마지막 Output이 (width, height, channel) = (256, 256, 128) 인 Activation Map이 있다면, 각 Channel 별로 모두 GAP을 해서 128개의 값이 나오면 softmax로 그 값들을 연결시켜주는 것이다. 이때 각각의 Class로 가는 Weight를 곱해준다.
+- 이렇게 하면 128개의 Channel 중에서 해당 Class로 판별하기 위해 어떤 Channel이 중요한 역할을 하는지 판단할 수 있다.
 ![image](https://user-images.githubusercontent.com/41967014/174729591-0e4b705a-c9f7-4ee3-ac64-c2a39afbf559.png)
 - $M_{c}$ = 클래스 c에 대한 Class Activation Map
 - 즉, 이미지가 클래스 c로 분류되는 경우, $(x,y)$ 위치에서의 Importance
